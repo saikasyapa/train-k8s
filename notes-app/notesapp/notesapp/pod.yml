@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: notes-app
+  namespace: nginx
+  labels:
+    app: notes-app
+spec:
+  containers:
+    - name: notes-app
+      image: seshasai1919/flask-app
+      ports:
+        - containerPort: 5000

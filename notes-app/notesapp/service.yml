@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: flask-service
+  namespace: nginx
+spec:
+  selector:
+    app: notes-app
+  ports:
+    - protocol:
+      port: 5000
+      targetPort: 5000
+  type: ClusterIP
